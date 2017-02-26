@@ -8,7 +8,8 @@ defmodule DtaParser.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps(),
-     default_task: "parse_dta"]
+     default_task: "parse_dta",
+     escript: [main_module: DtaParser]]
   end
 
   # Configuration for the OTP application

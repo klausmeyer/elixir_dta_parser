@@ -1,6 +1,14 @@
 defmodule DtaParser do
-  def parse do
-    File.read!("data/sample.dta")
+  def main(args) do
+    [ file | _ ] = args
+
+    parse(file)
+  end
+
+  def parse(file) do
+    IO.puts "File: #{file}"
+
+    File.read!(file)
     |> parse_header
     |> parse_rows(1)
     |> parse_footer

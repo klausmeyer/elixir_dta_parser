@@ -3,6 +3,6 @@ defmodule Mix.Tasks.ParseDta do
 
   @shortdoc "Parse DTA file and output it's content"
   def run(_) do
-    DtaParser.parse
+    DtaParser.parse("data/sample.dta")
   end
 end
