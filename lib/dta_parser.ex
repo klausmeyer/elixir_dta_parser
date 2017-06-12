@@ -1,10 +1,4 @@
 defmodule DtaParser do
-  def main(args) do
-    [ file | _ ] = args
-
-    parse(file)
-  end
-
   def parse(file) do
     File.read!(file)
     |> parse_header
