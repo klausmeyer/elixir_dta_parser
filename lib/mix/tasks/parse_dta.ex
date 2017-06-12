@@ -10,6 +10,6 @@ defmodule Mix.Tasks.ParseDta do
   end
 
   defp parse(file \\ "data/sample.dta") do
-    DtaParser.parse(file)
+    IO.inspect DtaParser.parse(file)
   end
 end
